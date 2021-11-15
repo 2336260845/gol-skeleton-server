@@ -34,11 +34,11 @@ type RpcResponse struct {
 }
 
 func (this *CaculateStruct) Caculate(req RpcRequest, resp *RpcResponse) error {
-	req.World.DebugLog(req.Turn)
+	//req.World.DebugLog(req.Turn)
 	for i := 0; i < req.Turn; i++ {
 		req.World.NextStep()
 	}
-	req.World.DebugLog(req.Turn)
+	//req.World.DebugLog(req.Turn)
 
 	resp.World = req.World
 	resp.RpcStatus = 0
