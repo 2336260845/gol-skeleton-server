@@ -34,6 +34,7 @@ type RpcResponse struct {
 }
 
 func (this *CaculateStruct) Caculate(req RpcRequest, resp *RpcResponse) error {
+	fmt.Printf("start to Caculate\n")
 	//req.World.DebugLog(req.Turn)
 	for i := 0; i < req.Turn; i++ {
 		req.World.NextStep()
